@@ -1,0 +1,126 @@
+body {
+  color: #000;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px dotted;
+  &:hover {
+    color: red;
+  }
+}
+
+#header {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  margin-bottom: 50px;
+  padding-bottom: 25px;
+  background: #000;
+  color: #fff;
+  font-size: 0.85em;
+  .header-inner {
+    padding-top: 25px;
+    padding-left: 50px;
+    padding-bottom: 25px;
+  }
+  
+  a {
+    color: #fff;
+    &:hover {
+      color: red;
+    }
+  }
+}
+
+.wrapper {
+  position: relative;
+  padding-top: 150px;
+}
+
+#about {
+  width: 900px;
+  margin: 50px;
+  #manhattan {
+    float: left;
+    width: 400px;
+    height: 800px;
+    border: 1px dotted;
+    margin-right: 25px;
+    margin-bottom: 25px;
+  }
+}
+
+#canalst {
+  border-top: 5px solid;
+  position: relative;
+  top: 125px;
+  .label {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.8em;
+  }
+}
+
+#projects {
+  width: 1024px;
+  margin-bottom: 75px;
+  margin-left: 50px;
+  .project {
+    display: inline-block;
+    vertical-align: top;
+    // width: 150px;
+    // max-width: 14%;
+    // margin-left: 10px;
+    .photo {
+      border: 1px dotted #000;
+      height: 200px;
+      width: 163px;
+    }
+    .heading {
+      padding: 10px 0;
+    }
+    .description {
+      font-size: 0.75em;
+      width: 90%;
+    }
+  }
+}
+
+.project_map {
+  width: 99%;
+  margin: 0 10px;
+  border: 1px dotted;
+  height: 500px;
+}
+
+.project_info {
+  margin-left: 25px;
+  margin-top: 20px;
+  .project_image {
+    border: 1px dotted;
+    margin-top: 10px;
+    height: 400px;
+  }
+}
+
+
+#footer {
+  margin-top: 50px;
+  padding-top: 10px;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  height: 50px;
+  .footer-inner {
+    margin-left: 50px;
+  }
+  a {
+    color: #fff;
+    &:hover {
+      color: red;
+    }
+  }
+}

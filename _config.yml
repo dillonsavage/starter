@@ -1,4 +1,4 @@
-baseurl: /starter
+baseurl: /datascapes
 permalink: pretty
 markdown: rdiscount
 prose:
@@ -11,11 +11,11 @@ prose:
       - name: "category"
         field:
           element: "hidden"
-          value: "blog"
+          value: "project"
       - name: "layout"
         field:
           element: "hidden"
-          value: "blog"
+          value: "project"
       - name: "title"
         field:
           element: "text"
@@ -40,6 +40,16 @@ prose:
               value: "pears"
             - name: "Mangos"
               value: "mangos"
+      - name: "id"
+        field:
+          element: "text"
+          label: "Project ID"
+          value: ""
+      - name: "heading"
+        field:
+          element: "text"
+          label: "Project title"
+          value: ""
     _posts/static:
       - name: "layout"
         field:
