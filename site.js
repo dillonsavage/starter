@@ -1,4 +1,5 @@
 ---
 ---
-;{% include js/jquery.min.js %}
-{% include js/datascapes.js %}
+;{% include js/jquery-1.11.0.min.js %}
+;{% include js/lightbox.js %}
+;{% include js/datascapes.js %}

@@ -1,9 +1,30 @@
 ---
 category: project
 layout: project
-title: Project 6
+title: Zooming Through Time
+authors: Benjamin Bromberg Gaber, Sara Shalam
+permalink: zooming-through-time
+map_img_s: zooming_s.jpg
+map_img_l: zooming_l.jpg
+special: 1
 pid: 6
-synopsis: A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a
+iframe_src: https://a.tiles.mapbox.com/v4/lmm2132.k97kgega/attribution,zoompan,zoomwheel,geocoder,share.html?access_token=pk.eyJ1IjoibG1tMjEzMiIsImEiOiIxVnh3TFB3In0.16qL8ReIR89rIgAmrXhq9Q
+synopsis: Depicting points of informal information flows collected during a one-day field survey, both the static and interactive maps challenge how users-data relationships are constructed across different dimensionalities. <i>Between Baxter and the Bowery.</i>
 ---
-A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image, and the breath of that universal love which bears and sustains us, as it floats around us in an eternity of bliss; and then, my friend, when darkness overspreads my eyes, and heaven and earth seem to dwell in my soul and absorb its power, like the form of a beloved mistress, then I often think with longing, Oh, would I could describe these conceptions, could impress upon paper all that is living so full and warm within me, that it might be the mirror of my soul, as my soul is the mirror of the infinite God! O my friend -- but it is too much for my strength -- I sink under the weight of the splendour of these visions!A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and
-
+<p>Our interactive map guides the users as they zoom through time, understanding the immigrant experience of the Lower East Side by seeing the groups of people that lived and worked there. Users start in the present day, and as they zoom back in time, information is revealed, with the timeline in the teaser as a guide. In addition to revealing information about the given time period, the different map layers in the background orient users to the year to which they have zoomed. By using similar symbology and related representation techniques despite the changes in resolution, users can understand the progression of the map experience and begin to understand the connection of information across time. Due to the gaps in data collection this map gives form to the inconsistencies of information available through low resolution and fuzzy layers. This lack of data forced the scope of the project to narrow, while requiring creative approaches to representing the informal aspects of the city. The interactive map enables this experience of exploration, in which users can jump between layers, years and different levels of resolution, while the static map allows a greater level of comparison as the different layers of data sit side-by-side. The detailed timeline at the bottom gives the user an overall idea of the trends that occur over time.<p>
+<script>
+L.mapbox.accessToken = 'pk.eyJ1IjoibG1tMjEzMiIsImEiOiIxVnh3TFB3In0.16qL8ReIR89rIgAmrXhq9Q';
+// Construct a bounding box for this map that the user cannot
+// move out of
+var southWest = L.latLng(40.706, -74.006),
+    northEast = L.latLng(40.723, -73.980),
+    bounds = L.latLngBounds(southWest, northEast);
+var map = L.mapbox.map('map', 'lmm2132.k97kgega', {
+center: [40.714,-73.991],
+zoom: 19,
+    maxBounds: bounds,
+    maxZoom: 19,
+    minZoom: 11
+});
+L.control.fullscreen().addTo(map);
+</script>

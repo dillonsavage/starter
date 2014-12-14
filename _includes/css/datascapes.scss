@@ -11,9 +11,14 @@ a {
   }
 }
 
+#map {
+  width: 100%;
+  height: 750px;
+}
+
 #header {
   position: fixed;
-  z-index: 1;
+  z-index: 9000;
   width: 100%;
   margin-bottom: 50px;
   padding-bottom: 25px;
@@ -36,12 +41,13 @@ a {
 
 .wrapper {
   position: relative;
-  padding-top: 150px;
+  padding-top: 135px;
 }
 
 #about {
   width: 900px;
-  margin: 50px;
+  margin: 0 auto;
+  padding-top: 50px;
   #manhattan {
     float: left;
     width: 400px;
@@ -53,9 +59,15 @@ a {
 }
 
 #canalst {
-  border-top: 5px solid;
-  position: relative;
-  top: 125px;
+  // border-top: 5px solid;
+  // position: relative;
+  // top: 125px;
+  // border: 1px dotted #000;
+  height: 600px;
+  // width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  background: url(/datascapes/img/ProjectCollage-01.jpg) no-repeat;
   .label {
     text-align: center;
     text-transform: uppercase;
@@ -66,9 +78,13 @@ a {
 
 #projects {
   width: 1024px;
-  margin-bottom: 75px;
-  margin-left: 50px;
+  margin: 0 auto;
+  padding-left: 50px;
   .project {
+    // heinous!
+    i {
+      font-style: italic;
+    }
     display: inline-block;
     vertical-align: top;
     // width: 150px;
@@ -81,6 +97,9 @@ a {
     }
     .heading {
       padding: 10px 0;
+      .authors {
+        font-size: 0.75em;
+      }
     }
     .description {
       font-size: 0.75em;
@@ -99,10 +118,14 @@ a {
 .project_info {
   margin-left: 25px;
   margin-top: 20px;
-  .project_image {
-    border: 1px dotted;
-    margin-top: 10px;
-    height: 400px;
+  .project_text {
+    img {
+      float: right;
+      margin-left: 25px;
+    }
+  }
+  a.lb {
+    border: none;
   }
 }
 

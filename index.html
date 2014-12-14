@@ -3,14 +3,18 @@ layout: default
 section: static
 ---
 <div id="canalst">
-  <span class="label">Canal Street</span>
+
 </div>
 <div id="projects">
-  {% for item in site.categories.project %}
+  {% for item in site.categories.project reversed %}
   <div class="project" id="{{item.pid}}">
-    <div class="photo"></div>
-    <div class="heading"><a href='{{site.baseurl}}{{item.url}}'>{{item.title}}</a></div>
-    <div class="description">{{item.synopsis}}</div>
+    <div class="heading">
+      <a href='{{site.baseurl}}{{item.url}}'>{{item.title}}</a>
+      <p class="authors">{{item.authors}}</p>
+    </div>
+    <div class="description">
+      {{item.synopsis}}
+    </div>
   </div>
   {% endfor %}
 </div>

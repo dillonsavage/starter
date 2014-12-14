@@ -1,8 +1,55 @@
 ---
 layout: project
 category: project
-title: Project 1
+title: You Are Where
+authors: Somala Diby, Rachael Dottle, Jourdan Sayers
+permalink: you-are-where
 pid: 1
-synopsis: A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with
+special: 1
+iframe_src: https://a.tiles.mapbox.com/v4/lmm2132.kclg4j17/attribution,zoompan,zoomwheel,geocoder,share.html?access_token=pk.eyJ1IjoibG1tMjEzMiIsImEiOiIxVnh3TFB3In0.16qL8ReIR89rIgAmrXhq9Q
+map_img_s: you_are_where_s.jpg
+map_img_l: you_are_where_l.jpg
+synopsis: Through this project, we explore how western Canal Street obstructs the flow and organization of culture, goods, and people and renders the area transient, disorienting, and placeless. We argue that the design of this area's transportation infrastructure creates a geography-bending portal generating nearness between New Jersey and Brooklyn while erecting barriers between physically adjacent neighborhoods. <i>Canal Street from the Hudson River to Avenue of the Americas.</i>
 ---
-A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a
+<p>Through this project, we investigate how urban infrastructure facilitates movement and understandings of place at multiple scales. More specifically, we explore how Canal Street obstructs the flow and organization of culture, goods, and people, especially at its westernmost extent. We argue that the design of this area's transportation infrastructure creates a geography-bending portal generating nearness between New Jersey and Brooklyn while erecting barriers between physically adjacent neighborhoods. The design of this section of Canal Street has rendered the area transient, disorienting, and placeless.</p>
+<p>As individuals navigating the city, we are most comfortable in places we have learned about and recognize, places that haven't changed, and places that we can confidently navigate. History, familiarity, identifiability, and orientability are all ways in which we articulate place. This area of Canal Street, then, is distinctly placeless. Its wide roadbed, high volume of traffic, and grid-defying intersections discourage pedestrian use and outsider accessibility. Its landscape is pierced by historic skyscrapers, reconfigured by new construction sites, and fragmented by empty lots and inaccessible parks, forming a geography that is constantly in flux. The physical proximity of its surrounding elements is consequently obscured in a way that can only be understood by mapping Canal Street through multiple scales and time periods.</p>
+<p>This map disaggregates determinants of place to communicate a narrative of placelessness in western Canal Street. By visualizing these determinants, we attempt to simulate the acute feeling of placelessness experienced in this part of the city.</p>
+
+<style>
+.legend label,
+.legend span { display:block; float:left; height:300px; width:100%; text-align:center;
+ font-size:9px; color:#808080; }
+</style>
+
+<div id="legend" style="display:none;">
+ <strong>Click thumbnail for full legend</strong>
+ <a href="http://i.imgur.com/VfUqla3.png" target="_blank"><img src="http://i42.photobucket.com/albums/e337/jourdansayers/LEGEND_small_zps095351b7.jpg" border="0" alt="Image and video hosting by TinyPic"></a>
+</div>
+
+<script>
+L.mapbox.accessToken = 'pk.eyJ1IjoibG1tMjEzMiIsImEiOiIxVnh3TFB3In0.16qL8ReIR89rIgAmrXhq9Q';
+// Construct a bounding box for this map that the user cannot
+// move out of
+var southWest = L.latLng(40.688188, -74.133682),
+   northEast = L.latLng(40.806533, -73.80907),
+   bounds = L.latLngBounds(southWest, northEast);
+
+var map = L.mapbox.map('map', 'lmm2132.kclg4j17', {
+   // set that bounding box as maxBounds to restrict moving the map
+   // see full maxBounds documentation:
+   // http://leafletjs.com/reference.html#map-maxbounds
+   maxBounds: bounds,
+   maxZoom: 19,
+   minZoom: 13}
+
+);
+
+ map.scrollWheelZoom.disable();
+ 
+ map.legendControl.addLegend(document.getElementById('legend').innerHTML);
+
+// zoom the map to that bounding box
+map.fitBounds(bounds);
+
+L.control.fullscreen().addTo(map);
+</script>
